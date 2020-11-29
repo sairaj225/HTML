@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position</title>
+    <style>
+        body{
+            padding: 100px 100px;
+        }
+        .parent{
+            background: blue;
+            position: relative;
+            left: 12px;
+            width: 100%;
+            height: 1000px;
+            
+        }
+        .one{
+            background: red;
+            position: absolute;
+            left: 20px;
+            top: 200px;
+
+
+        }
+        .two{
+            background: rgb(125, 250, 125);
+            position: absolute;
+            left: 20px;
+            top: 100px;
+
+        }
+        .stiky{
+            position: sticky;
+            top: 30px;
+            background: linear-gradient(to right,green,white);
+            z-index: 1;
+        }
+        .fixed{
+            position: fixed;
+            background: radial-gradient(rgb(170, 19, 125),rgb(128, 0, 0));
+            right: 0;
+            bottom: 0;
+            width: 200px;
+            height: 200px;
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="parent">
+        <div class="stiky">
+            stiky
+        </div>
+        <div class="one">
+            first child
+        </div>
+        <div class="two">
+            secondchild
+        </div>
+        <div class="fixed">
+            secondchild
+        </div>
+    </div>
+    <img src="unicorn.jpeg" alt="unicorn">
+</body>
+</html>

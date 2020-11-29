@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vertical tabs</title>
+    <style>
+        .tab{
+            background-color: #adf175;
+            border: 1px solid #ccc; 
+            width: 30%;
+            height: 100%;
+            
+        }
+        .tab button{
+            display: block;
+            background-color: inherit;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            padding: 32px 16px;
+            font-size: 3vw;
+            float: left;
+            transition: 0.5s;
+            width: 100%;
+        }
+        .tab button:hover{
+            background-color: rgb(108, 240, 114);
+        }
+        .tab button.active{
+            background-color: rgb(108, 240, 114); 
+        }
+        .tabcontent{
+            display: none;
+            padding: 6px 12px;
+        }
+        .close{
+            float: right;
+            cursor: pointer;
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tab">
+        <button class="tablink" onclick="openCity(event, 'LR')" id="defaultOpen">Longest River</button>
+        <button class="tablink" onclick="openCity(event, 'LD')">Longest Dam</button>
+        <button class="tablink" onclick="openCity(event, 'HP')">Highest peak</button>
+    </div>
+
+    <div id="LR" class="tabcontent">
+        <span onclick="this.parentElement.style.display = 'none' " class="close">&times;</span>
+        <h3>Longest River</h3>
+        <p>In india - indus river</p>
+    </div>
+
+    <div id="LD" class="tabcontent">
+        <span onclick="this.parentElement.style.display = 'none' " class="close">&times;</span>
+        <h3>Longest Dam</h3>
+        <p>In india - herakund dam</p>
+    </div>
+
+    <div id="HP" class="tabcontent">
+        <span onclick="this.parentElement.style.display = 'none' " class="close">&times;</span>
+        <h3>Highest Peak</h3>
+        <p>In india - kanchenajunga </p>
+    </div>
+
+    <!--java script for showing tab content-->
+    <script>
+        function openCity(event, cityName) {
+
+            var i, tabcontent, tablink;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            tablink = document.getElementsByClassName("tablink");
+
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            for (i = 0; i < tablink.length; i++) {
+                tablink[i].className.replace("active", "");
+            }
+
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += "active";
+        }
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+</html>

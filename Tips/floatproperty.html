@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diplay:float property</title>
+    <style>
+        body{
+            background: ;
+        }
+        
+        .float1{
+            /*----flex------*/
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /*----flex------*/
+            height: 200px;
+            width: 500px;
+            padding: 25px;
+            margin: 25px 25px;
+            background: linear-gradient(to right, rgb(229, 255, 0),  pink);
+            transition: width 4s;
+
+            
+        }
+        .float2{
+            /*----flex------*/
+            display: flex;
+            /*flex-direction: column;
+            flex-wrap: wrap-reverse;*/
+            flex-flow: row nowrap;  /*default*/
+            justify-content: flex-end;  /* flex-start, flex-end, center, space-between, space-around*/
+            align-items: center;        /* flex-start, flex-end, center, stretch, baseline */
+            align-content: center;
+            /*----flex------*/
+            height: 200px;
+            padding: 25px;
+            margin: 25px 25px;
+            background: linear-gradient(to right, green, lightgreen);
+            
+
+        }
+        .float1:hover {
+            width: 100%;
+        }
+        .item{
+            background: linear-gradient(to right, blue, lightblue);
+            margin: 25px 25px;
+            height: 50px;
+            width: 50px;
+            text-align: center;
+            
+
+        }
+        .one{
+            order: 2;
+            align-self: flex-end;
+		text-shadow: 8px 8px 5px black;
+        }
+        .two{
+            order: 1;
+            flex-shrink: 3;
+            flex-basis: 2;
+        }
+        @media screen and (max-width: 575px) {
+            .float2 {
+              flex-direction: column;
+              height: fit-content;
+            }
+            .float1 {
+                flex-direction: column;
+                height: fit-content;
+                width: fit-content;
+              }
+          }
+        body:hover{
+            background-color: rgb(6, 15, 10);
+        }
+    </style>
+</head>
+<body>
+    <div class="float1">
+        <div class="item one">
+            first
+        </div>
+        <div class="item">
+            second
+        </div>
+        <div class="item ">
+            three
+        </div>
+        <div class="item">
+            four
+        </div>
+        <div class="item two">
+            five
+        </div>
+        <div class="item">
+            sixth
+        </div>
+        <div class="item">
+            seven
+        </div>
+        <div class="item">
+            first
+        </div>
+        <div class="item">
+            second
+        </div>
+        <div class="item">
+            three
+        </div>
+        
+    </div>
+    <div class="float2">
+        <div class="item one">
+            first
+        </div>
+        <div class="item">
+            second
+        </div>
+        <div class="item">
+            three
+        </div>
+        <div class="item two">
+            four
+        </div>
+        <div class="item">
+            five
+        </div>
+        <div class="item">
+            sixth
+        </div>
+        <div class="item">
+            seven
+        </div>
+    </div>
+</body>
+</html>

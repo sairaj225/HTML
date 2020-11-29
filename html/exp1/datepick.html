@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Jquery get difference between two dates in days example - ItSolutionStuff.com</title>
+</head>
+<body>
+  
+<script type="text/javascript">
+   
+var days = daysdifference('10/11/2019', '10/20/2019');
+  
+console.log(days);
+  
+function daysdifference(firstDate, secondDate){
+    var startDay = new Date(firstDate);
+    var endDay = new Date(secondDate);
+   
+    var millisBetween = startDay.getTime() - endDay.getTime();
+    var days = millisBetween / (1000 * 3600 * 24);
+   
+    return Math.round(Math.abs(days));
+}
+</script>
+   
+</body>
+</html>

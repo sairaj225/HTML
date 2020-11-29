@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fe55b981e5.js" crossorigin="anonymous"></script>    <title>Soft Nav</title>
+    <style>
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate( -50%, -50% );
+            display: flex;
+            box-shadow: 3px 3px 20px 0 #ccc;
+        }
+        .option {
+            width: 60px;
+            height: 60px;
+            background: #ffffff;
+            transition: all 0.5s;
+            overflow: hidden;
+        }
+        .fa {
+            width: 60px;
+            height: 60px;
+            box-sizing: border-box;
+            line-height: 60px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        .option span {
+            margin: 0 5px;
+            font-size: 0.9rem;
+            font-family: 'Alata', sans-serif;
+        }
+        .option:hover {
+            width: 130px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="option">
+            <i class="fa fa-home" aria-hidden="false"></i>
+            <span>Home</span>
+        </div>
+        <div class="option">
+            <i class="fa fa-user" aria-hidden="false"></i>
+            <span>Profile</span>
+        </div>
+        <div class="option">
+            <i class="fa fa-sliders" aria-hidden="false"></i>
+            <span>Setting</span>
+        </div>
+        <div class="option">
+            <i class="fa fa-exclamation-circle" aria-hidden="false"></i>
+            <span>About</span>
+        </div>
+    </div>
+</body>
+</html>

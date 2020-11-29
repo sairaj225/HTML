@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-centering text</title>
+    <style>
+        *{
+            font-size: 32px;
+        }
+        
+        .flex-centering{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .absolute-property{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+        }
+        .grid-property{
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .margin-prperty{
+            height: 100vh;
+            display: grid;
+        }
+        .margin-property  .child{
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-centering">
+        <p>this is centered text using flex-property</p>
+    </div>
+    <div class="absolute-property">
+        <p>this is centered using absolute-property</p>
+    </div>
+    <div class="grid-property">
+        <p>this is centered using grid-property</p>
+    </div>
+    <div class="margin-property">
+        <p class="child">this is centered using margin-prperty</p>
+    </div>
+</body>
+</html>

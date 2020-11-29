@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 40% 40%;
+            grid-template-rows: 40% 40%;
+            justify-content: center;
+            align-items: center;
+            column-gap: auto;
+        }
+        .metals {
+            height: 200px;
+            width: 200px;
+            box-shadow: 3px 3px 20px 0 #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30%;
+        }
+        .bronze {
+            background: conic-gradient( #d95641, #b14439, #b2453a, #d25645,
+                                         #d95641, #b14439, #b2453a, #d25645,
+                                         #d95641, #b14439, #b2453a, #d25645,
+                                         #d95641, #b14439, #b2453a, #d25645);
+        }
+        .titanium {
+            background: conic-gradient(#e6e9bf, #d2b5aa, #cbaea3, #d4b5ab,
+                                    #e6e9bf, #d2b5aa, #cbaea3, #d4b5ab,
+                                    #e6e9bf, #d2b5aa, #cbaea3, #d4b5ab,
+                                    #e6e9bf, #d2b5aa, #cbaea3, #d4b5ab );
+        }
+        .gold {
+            background: conic-gradient( #edc800, #e3b600, #f3cf00, #ffe800,
+                                    #edc800, #e3b600, #f3cf00, #ffe800,
+                                    #edc800, #e3b600, #f3cf00, #ffe800,
+                                    #edc800, #e3b600, #f3cf00, #ffe800);
+        }
+        .silver {
+            background: conic-gradient(#d7d7d7, #c3c3c3, #ccc , #c6c6c6,
+            #d7d7d7, #c3c3c3, #ccc , #c6c6c6,
+            #d7d7d7, #c3c3c3, #ccc , #c6c6c6,
+            #d7d7d7, #c3c3c3, #ccc , #c6c6c6);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="metals bronze">bronze</div>
+        <div class="metals titanium">titanium</div>
+        <div class="metals gold">gold</div>
+        <div class="metals silver">silver</div>
+    </div>
+</body>
+</html>

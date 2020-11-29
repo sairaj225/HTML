@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooople registration form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .background{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .grid-property{
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .registration-form{
+            width: 500px;
+            height: 300px;
+            box-shadow: 8px 8px 20px 0px #ccc;
+            border-radius: 5px;
+        }
+        .header .tooople {
+            font-size: 32px; 
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin: 5px 5px;
+            color: rgb(117, 9, 103);
+        }
+        .flex-centering{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header p{
+            font-size: 16px;
+            color: #474747;
+        }
+        .icons-flex {
+            display: flex;
+
+        }
+        
+        .user-category .user {
+            width: 60px;
+            height: 60px;
+            margin: 20px 20px;
+            padding: 10px 10px;
+        }
+        .user-category .user img{
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            border: 2px solid rgb(117, 9, 103);
+            transition: all 0.5s ease;
+            
+        } 
+        .user-category .user p{
+            text-align: right;
+            font-size: 16px;
+            color: #474747;
+        }
+        .user-category .user:hover img{
+            transform: scale(1.1);
+            
+        }
+        .user-category .user:hover p{
+            color: rgb(117, 9, 103);
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .user-category {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .margin-top-50px{
+            margin-top: 50px;
+        }
+        .margin-top-20px{
+            margin-top: 20px;
+        }
+        .form-content h3 {
+            text-align: center;
+            
+        }
+        @media screen and (max-width: 400px){
+            .registration-form {
+                width: 300px;
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="centering-content grid-property">
+            <div class="registration-form">
+                <div class="header ">
+                    <div class="tooople flex-centering">Tooople</div>
+                </div>
+                <div class="form-content margin-top-20px">
+                    <h3>Let us know who are you ? Click on icon.</h3>
+                    <div class="user-category margin-top-50px">
+                        <div class="user">
+                            <a href="student" class="icon">
+                                <img src="svg/student.svg" alt="student">                        
+                            </a>
+                            <p>Student</p>
+                        </div>
+                        <div class="user">
+                            <a href="#" class="icon">
+                                <img src="svg/bank.svg" alt="Service provider">
+                            </a>
+                            <p>Service provider</p>
+                        </div>
+                        <div class="user">
+                            <a href="#" class="icon">
+                                <img src="svg/content-design.svg" alt="Content provider">
+                            </a>
+                            <p>Content provider</p>
+                        </div>
+                        <div class="user">
+                           <a href="#" class="icon">
+                                <img src="svg/mentorship.svg" alt="Mentor">
+                           </a>
+                            <p>Mentor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

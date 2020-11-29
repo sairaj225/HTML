@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pulse animation</title>
+    <style>
+        .center-container {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .pulse {
+            width: 5rem;
+            height: 5rem;
+            background-color: rgb(47, 231, 63);
+            border-radius: 50%;
+        }
+        .pulse::after {
+            position: absolute;
+            content: '';
+            width: 5rem;
+            height: 5rem;
+            background-color: rgb(47, 231, 63);
+            border-radius: 50%;
+            z-index: 1;
+            animation: pulse 1s ease infinite;
+            
+        }
+        @keyframes pulse {
+            from { transform: scale( 1 ); opacity: 1; }
+            to { transform: scale( 3 ); opacity: 0; }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="center-container">
+        <div class="pulse"></div>
+    </div>
+</body>
+</html>

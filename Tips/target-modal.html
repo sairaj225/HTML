@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">    <title>model target</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            color: rgb(182, 179, 179);
+        }
+        .modal {
+            display: none;
+        }
+        .modal:target {
+            display: block;
+        }
+        .modal .modal-dialog {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal .modal-dialog .modal-content {
+           
+            width: 350px;
+            height: 350px;
+            box-shadow: 5px 5px 20px rgb(228, 225, 225);
+                        
+            
+        }
+        .modal .modal-dialog .modal-content header{
+            position: relative;
+        }
+        .modal .modal-dialog .modal-content header a{
+            text-decoration: none;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 32px;
+        }
+        .modal .modal-dialog .modal-content header p {
+            font-size: 32px;
+            font-weight: bold;
+            color: violet;
+        }
+        .modal .modal-dialog .modal-content header h3 {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .modal .modal-dialog .modal-content header p,
+        .modal .modal-dialog .modal-content header h3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        .modal .modal-dialog .modal-content .container input{
+            display: block;
+
+        }
+    </style>
+</head>
+<body>
+    <a href="#modal">signup</a>
+
+    <div class="modal" id="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header>
+                    <a href="#" class="close-modal">&times;</a>
+                    <p>Tooople</p>
+                    <h3>Sign in</h3>
+                </header>
+                <div class="container">
+                    <label for=email>Email</label><input type="text" placeholder="Enter your email">
+                    <label for="password">Password</label><input type="password" placeholder="Enter you password">
+                </div>
+                <footer>
+                    <button type="submit">Sign in</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

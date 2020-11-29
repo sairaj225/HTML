@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input elements</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-sarif;
+            font-size: 16px;
+        }
+        .custom-field {
+            position: relative;
+            font-size: 14px;
+            padding-top: 20px;
+            margin-bottom: 5px;
+        }
+        .custom-field input {
+            border: none;
+            -webkit-appearance: none;
+            -ms-appearence: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: #f2f2f2;
+            padding: 12px;
+            border-radius: 3px;
+            width: 250px;
+            outline: none;
+            font-size: 14px;
+            
+        }
+        .custom-field .placeholder {
+            position: absolute;
+            left: 12px;
+            top: calc(50% + 10px);
+            transform: translateY(-50%);
+            color: #aaa;
+            transition: top 0.3s ease,
+                        font-size 0.3s ease,
+                        color 0.3s ease;
+
+
+        }
+        .custom-field input:valid + .placeholder,
+        .custom-field input:focus + .placeholder {
+            top: 10px;
+            font-size: 10px;
+            color: #222;
+        }
+        /*--------- ONE -------------*/
+        .custom-field.one input {
+            background: none;
+            border: 2px solid #ddd;
+            transition: border-color 0.3s ease;
+        }
+        .custom-field.one input:valid,
+        .custom-field.one input:focus {
+            border-color: #222;
+            transition-delay: 0.1s;
+        }
+        .custom-field.one input + .placeholder {
+            padding: 0 5px;
+            left: 8px;
+        }
+        .custom-field.one input:valid + .placeholder,
+        .custom-field.one input:focus + .placeholder {
+            top: 20px;
+            background: #fff;
+        }
+        
+         /*--------- TWO -------------*/
+         .custom-field.two input {
+            border-radius: 0px;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            background: linear-gradient(90deg, #222, #222) center bottom/0 2px no-repeat,
+                        linear-gradient(90deg, #ccc, #ccc) left bottom/100% 2px no-repeat,
+                        linear-gradient(90deg, #fafafa, #fafafa) left bottom/100%  no-repeat;
+            transition: background-size 0.3s ease;
+        }
+        .custom-field.two input:valid,
+        .custom-field.two input:focus {
+            background-size: 100% 2px, 100% 2px, 100%;
+        }
+
+        /*--------- THREE -------------*/
+        .custom-field.three .border {
+            --drow-duration: 0.1s;
+            --drow-color: rgb(22, 236, 104);
+            --drow-line-width: 2px;
+            --drow-easing: linear;
+        }
+        .custom-field.three .border {
+            
+            width: 100%;
+            height: calc(100% - 20px);
+            position: absolute;
+            left: 0;
+            top: 20px;
+            border-radius: 3px;
+
+        }
+        .custom-field.three .border::after,
+        .custom-field.three .border::before {
+            content: "";
+            display: inline-block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            border-radius: 3px;
+            transition: width var(--drow-duration) var(--drow-easing), 
+                        height var(--drow-duration) var(--drow-easing);
+            
+        }
+        .custom-field.three .border::before {
+            left: 0;
+            bottom: 0;
+            border-bottom: 0px solid var(--drow-color);
+            border-right: 0px solid var(--drow-color);
+            transition: border-width var(--drow-duration) var(--drow-easing) calc(var(--drow-duration) * 4),
+                        width var(--drow-duration) var(--drow-easing) calc(var(--drow-duration) * 3), 
+                        height var(--drow-duration) var(--drow-easing) calc(var(--drow-duration) * 2);
+        }
+
+        .custom-field.three .border::after {
+            right: 0;
+            top: 0;
+            border-top: 0px solid var(--drow-color);
+            border-left: 0px solid var(--drow-color);
+            transition: border-width var(--drow-duration) var(--drow-easing) calc(var(--drow-duration) * 2),
+                        width var(--drow-duration) var(--drow-easing) var(--drow-duration), 
+                        height var(--drow-duration) var(--drow-easing);
+        }
+        .custom-field.three input.dirty ~ .border:before,
+        .custom-field.three input:focus ~ .border:before,
+        .custom-field.three input.dirty ~ .border:after,
+        .custom-field.three input:focus ~ .border:after{
+            width: 100%;
+            height: 100%;
+            border-width: var(--drow-line-width);
+        } 
+        .custom-field.three input.dirty ~ .border:before,
+        .custom-field.three input:focus ~ .border:before {
+            
+            
+            transition: 
+                        width var(--drow-duration) var(--drow-easing),
+                        height var(--drow-duration) var(--drow-easing) var(--drow-duration);
+        }
+        .custom-field.three input.dirty ~ .border:after,
+        .custom-field.three input:focus ~ .border:after {
+            
+            
+            transition: border-width var(--drow-duration) var(--drow-easing) calc(var(--drow-duration) * 2),
+                        width var(--drow-duration) var(--drow-easing) calc(var(--drow-duration) * 2),
+                        height var(--drow-duration) var(--drow-easing) calc(var(--drow-duration) * 3);
+        }
+        /*
+        input:focus::placeholder {
+            color: transparent;
+        }
+        input::placeholder {
+            color: #222;
+            transition: color 0.3s ease;
+        }
+        */
+    </style>
+</head>
+<body>
+    <label class="custom-field">
+        <input type="text" required>
+        <span class="placeholder">Enter text</span>
+    </label>
+    <label class="custom-field one">
+        <input type="text" required>
+        <span class="placeholder">Enter text</span>
+    </label>
+    <label class="custom-field two">
+        <input type="text" required>
+        <span class="placeholder">Enter text</span>
+    </label>
+    <label class="custom-field three">
+        <input type="text" required>
+        <span class="placeholder">Enter text</span>
+        <span class="border"></span>
+    </label>
+
+    <script>
+        const inputs = document.querySelector('input');
+
+        inputs.addEventListener ('blur', e => {
+            if (e.target.value) {
+                e.target.classList.add('dirty');
+            }
+            else {
+                e.target.classList.remove('dirty');
+            }
+        });
+    </script>
+</body>
+</html>

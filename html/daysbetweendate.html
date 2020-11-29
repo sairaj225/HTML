@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" id="date1" onload="getDate()">
+    <input type="date" id="date2" onload="getDate()">
+
+    <input type="text" id="days">
+    <input type="button" value="getdays" id="btn">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#date2").change(function(){
+                var d1=$("#date1").val();
+                var d2=$("#date2").val();
+                var days=calculate(d1,d2);
+                $("#days").val(days);
+
+            });
+        });
+        function calculate(a,b){
+            var d1=new Date(a);
+            var d2=new Date(b);
+            var diff=0;
+            days=1000*60*60*24;
+            diff=d2-d1;
+            ndays=Math.floor(diff/days);
+            return ndays;
+        }
+        function getDate(){
+            var today = new Date();
+        
+        document.getElementById("date1").value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
+        
+        
+        }
+        
+    </script>
+</body>
+</html>

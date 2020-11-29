@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid minmax function</title>
+    <style>
+        .container1 {
+            display: grid;
+            grid-template-columns: minmax(200px, 500px) 1fr 1fr;
+        }
+        .container2 {
+            display: grid;
+            grid-template-columns: minmax(300px, 50%) 1fr 1fr;
+        }
+        .container3 {
+            display: grid;
+            grid-template-columns: minmax(300px, 1fr) 1fr 1fr;
+        }
+        .container4 {
+            display: grid;
+            grid-template-columns: minmax(max-content, max-content) 1fr 1fr;
+        }
+        .container5 {
+            display: grid;
+            grid-template-columns: minmax(min-content, min-content) 1fr 1fr;
+        }
+        .container6 {
+            display: grid;
+            grid-template-columns: minmax(auto, auto) 1fr 1fr;
+        }
+        .card {
+            background: rgb(255, 255, 255);
+            margin: 10px 10px;
+            text-align: center;
+            height: 200px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            font-weight: bolder;
+            color: #ccc;
+            box-shadow: 5px 5px 20px #b4b2b2;
+        }
+        div > div:first-child {
+            background-color: teal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="card">min is 100px and max is 200px</div>
+        <div class="card">2nd block</div>
+        <div class="card">3rd block</div>
+    </div>
+    <div class="container2">
+        <div class="card">min is 200px and max is 50%</div>
+        <div class="card">2nd block</div>
+        <div class="card">3rd block</div>
+    </div>
+    <div class="container3">
+        <div class="card">min is 300px and max is 1fr</div>
+        <div class="card">2nd block</div>
+        <div class="card">3rd block</div>
+    </div>
+    <div class="container4">
+        <div class="card">min is max-content and max is max-content</div>
+        <div class="card">2nd block</div>
+        <div class="card">3rd block</div>
+    </div>
+    <div class="container5">
+        <div class="card">min is min-content and max is min-content</div>
+        <div class="card">2nd block</div>
+        <div class="card">3rd block</div>
+    </div>
+    <div class="container6">
+        <div class="card">min is min-content and max is min-content</div>
+        <div class="card">2nd block</div>
+        <div class="card">3rd block</div>
+    </div>
+</body>
+</html>

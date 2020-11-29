@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css soft background div</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #5271ff;
+        }
+        .soft-ui-1{
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 10vh;
+            width: 10vw;
+            background: #5271ff;
+            box-shadow: 20px 20px 61px #4159c9;
+
+        }
+        .soft-ui-2{
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 10vh;
+            width: 10vw;
+            background: #5271ff;
+            box-shadow: 20px 20px 61px #4159c9,
+                        -20px -20px 61px #6389ff;
+
+        }
+        .soft-ui-rounded{
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 10vh;
+            width: 10vw;
+            border-radius: 10px;
+            background: #5271ff;
+            box-shadow: 20px 20px 61px #4159c9,
+                        -20px -20px 61px #6389ff;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="soft-ui-1"></div>
+    <div class="soft-ui-2"></div>
+    <div class="soft-ui-rounded"></div>
+</body>
+</html>

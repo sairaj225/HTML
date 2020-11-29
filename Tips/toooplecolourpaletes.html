@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --colour1:  #550a46;
+            --colour2:  #4a69bb;
+            --colour3:  #617be3;
+            --colour4:  #9aceff;
+
+            --colour5: #6a197d;
+            --colour6: #ffa5bd;
+            --colour7: #e0dede;
+            --colour8: #f5f5f5;
+
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 500px 500px ;
+            grid-template-rows: 500px 500px 500px 500px ;
+            gap:25px;
+            text-align: center;
+            justify-content: center;
+            
+
+        }
+        input{
+            width: 80%;
+            height: 45px;
+            margin: 5px 0 5px 0;
+            border-radius: 5px;
+            border:none;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            
+        }
+        input:focus{
+            border: none;
+        }
+        .colour1{
+            background: var(--colour1);
+            border: 10px solid rgb(23, 20, 206);
+            
+        }
+        .colour1 h1{
+            color: var(--colour2);
+        }
+        .colour1 h2{
+            color: var(--colour3);
+        }
+        .colour1 h3{
+            color: var(--colour4);
+        }
+        .colour2{
+            background: var(--colour2);
+            border: 10px solid #550a46;
+        }
+        .colour2 h1{
+            color: var(--colour1);
+        }
+        .colour2 h2{
+            color: var(--colour3);
+        }
+        .colour2 h3{
+            color: var(--colour4);
+        }
+        .colour3{
+            background: var(--colour3);
+            border: 10px solid #550a46;
+        }
+        .colour3 h1{
+            color: var(--colour2);
+        }
+        .colour3 h2{
+            color: var(--colour1);
+        }
+        .colour3 h3{
+            color: var(--colour4);
+        }
+        .colour4{
+            background: var(--colour4);
+            border: 10px solid blue;
+        }
+        .colour4 h1{
+            color: var(--colour1);
+        }
+        .colour4 h2{
+            color: var(--colour2);
+        }
+        .colour4 h3{
+            color: var(--colour3);
+        }
+        .colour5{
+            background: var(--colour8);
+            border: 10px solid var(--colour1);
+            border-top: 50px solid var(--colour1);
+            border-bottom: 100px solid var(--colour1);
+        }
+        .colour5 h1{
+            color: var(--colour6);
+        }
+        .colour5 h2{
+            color: var(--colour7);
+        }
+        .colour5 h3{
+            color: var(--colour8);
+        }
+        .colour6{
+            background: var(--colour8);
+            border: 10px solid var(--colour6);
+            border-top: 50px solid var(--colour6);
+            border-bottom: 100px solid var(--colour6);
+        }
+        .colour6 h1{
+            color: var(--colour1);
+        }
+        .colour6 h2{
+            color: var(--colour5);
+        }
+        .colour6 h3{
+            color: var(--colour6);
+        }
+        .colour7{
+            background: var(--colour8);
+            border: 10px solid var(--colour5);
+            border-top: 50px solid var(--colour5);
+            border-bottom: 100px solid var(--colour5);
+        }
+        .colour7 h1{
+            color: var(--colour1);
+        }
+        .colour7 h2{
+            color: var(--colour5);
+        }
+        .colour7 h3{
+            color: var(--colour6);
+        }
+        .colour8{
+            background: var(--colour8);
+            border: 10px solid var(--colour2);
+            border-top: 50px solid var(--colour2);
+            border-bottom: 100px solid var(--colour2);
+        }
+        .colour8 h1{
+            color: var(--colour1);
+        }
+        .colour8 h2{
+            color: var(--colour5);
+        }
+        .colour8 h3{
+            color: var(--colour6);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="colour1">
+            <h1>TOOOPLE</h1>
+            <h2>TOOOPLE</h2>
+            <h3>TOOOPLE</h3>
+            <input type="button"  style="background:#9aceff" value="Save">
+            <input type="button" style="background:#4a69bb" value="Save">
+            <input type="button" style="background:#617be3" value="Save">
+        </div>
+        <div class="colour2">
+            <h1>TOOOPLE</h1>
+            <h2>TOOOPLE</h2>
+            <h3>TOOOPLE</h3>
+            <input type="button"  style="background:#9aceff" value="Save">
+            <input type="button" style="background:#550a46" value="Save">
+            <input type="button" style="background:#617be3" value="Save">
+        </div>
+        <div class="colour3">
+            <h1>TOOOPLE</h1>
+            <h2>TOOOPLE</h2>
+            <h3>TOOOPLE</h3>
+            <input type="button"  style="background:#9aceff" value="Save">
+            <input type="button" style="background:#550a46" value="Save">
+            <input type="button" style="background:#4a69bb" value="Save">
+        </div>
+        <div class="colour4">
+            <h1>TOOOPLE</h1>
+            <h2>TOOOPLE</h2>
+            <h3>TOOOPLE</h3>
+            <input type="button" style="background:#617be3" value="Save">
+            <input type="button" style="background:#550a46" value="Save">
+            <input type="button" style="background:#4a69bb" value="Save">
+        </div>
+        <div class="colour5">
+            <h1>TOOOPLE</h1>
+            <h2>TOOOPLE</h2>
+            <h3>TOOOPLE</h3>
+            <input type="button" style="background:#ffa5bd" value="Save">
+            <input type="button" style="background:#e0dede" value="Save">
+            <input type="button" style="background:#617be3" value="Save">
+        </div>
+        <div class="colour6">
+            <h1>TOOOPLE</h1>
+            <h2>TOOOPLE</h2>
+            <h3>TOOOPLE</h3>
+            <input type="button" style="background:#ffa5bd" value="Save">
+            <input type="button" style="background:#550a46" value="Save">
+            <input type="button" style="background:#6a197d" value="Save">
+        </div>
+        <div class="colour7">
+            <h1>TOOOPLE</h1>
+            <h2>TOOOPLE</h2>
+            <h3>TOOOPLE</h3>
+            <input type="button" style="background:#ffa5bd" value="Save">
+            <input type="button" style="background:#550a46" value="Save">
+            <input type="button" style="background:#6a197d" value="Save">
+        </div>
+        <div class="colour8">
+            <h1>TOOOPLE</h1>
+            <h2>TOOOPLE</h2>
+            <h3>TOOOPLE</h3>
+            <input type="button" style="background:#ffa5bd" value="Save">
+            <input type="button" style="background:#550a46" value="Save">
+            <input type="button" style="background:#6a197d" value="Save">
+        </div>
+    </div>
+</body>
+</html>

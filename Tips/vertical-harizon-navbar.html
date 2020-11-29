@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vertical and horizontal nav-bar</title>
+    <style>
+        .horizontal{
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            width: 70%;
+            background: #d0eb3b;
+            overflow: auto;
+            border-radius: 10px;
+        }
+        .horizontal a{
+            float: left;
+            width: 20%;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 32px;
+            color: #fff;
+            transition: all 1s ease;
+            
+        }
+        .active{
+            background-color: #f33bda;
+        }
+        a:hover{
+            background-color: #a1bb0e;
+        }
+        .vertical{
+            width: 90px;
+            background: #d0eb3b;
+            border-radius: 10px;
+        }
+        .vertical a{
+            display: block;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 32px;
+            color: #fff;
+            transition: all 1s ease;
+            
+
+        }
+    </style>
+    
+</head>
+<body>
+    <nav class="horizontal">
+        <a class="active" href="#"><i class="fa fa-home"></i></a> 
+        <a href="#"><i class="fa fa-search"></i></a> 
+        <a href="#"><i class="fa fa-envelope"></i></a> 
+        <a href="#"><i class="fa fa-globe"></i></a>
+        <a href="#"><i class="fa fa-trash"></i></a>
+    </nav>
+    <br>
+    <br>
+
+    <nav class="vertical">
+        <a class="active" href="#"><i class="fa fa-home"></i></a> 
+        <a href="#"><i class="fa fa-search"></i></a> 
+        <a href="#"><i class="fa fa-envelope"></i></a> 
+        <a href="#"><i class="fa fa-globe"></i></a>
+        <a href="#"><i class="fa fa-trash"></i></a>
+    </nav>
+    <script src="https://kit.fontawesome.com/a808bdee97.js" crossorigin="anonymous"></script>
+</body>
+</html>

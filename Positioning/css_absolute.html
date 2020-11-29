@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute</title>
+    <style>
+        .container {
+            position: relative;
+            height: 10vh;
+            display: grid;
+            align-items: center;
+            margin: 100px;
+        }
+        input {
+            width: 200px;
+            height: 40px;
+            padding: 5px;
+
+        }
+        label {
+            position: absolute;
+            left: 10px;
+            transition: all 1s ease;
+        }
+        input:valid + label,
+        input:focus + label {
+            top: -4px;
+            font-size: 15px;
+            background-color: #ffffff;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" required>
+        <label for="name" >Name</label>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinted Backgrounds</title>
+</head>
+<style>
+    .tinted-images-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .image {
+        width: 23rem;
+        height: 35rem;
+        border-radius: 8px;
+        background-size: cover;
+    }
+    .green {
+        background: linear-gradient(
+            rgba(69, 252, 228, 0.5),
+            rgba(69, 252, 228, 0.5)
+        ),
+        url('architecture.jpg');
+    }
+    .blue {
+        background: linear-gradient(
+            rgba(70, 5, 255, 0.5),
+            rgba(70, 5, 255, 0.5)
+        ),
+        url('beach.jpg');
+    }
+    .pink {
+        background: linear-gradient(
+            rgba(233, 30, 99, 0.5),
+            rgba(233, 30, 99, 0.5)
+        ),
+        url('beach.jpg');
+    }
+</style>
+<body>
+    <div class="tinted-images-wrapper">
+        <div class="image pink"></div>
+        <div class="image blue"></div>
+        <div class="image green"></div>
+    </div>
+</body>
+</html>

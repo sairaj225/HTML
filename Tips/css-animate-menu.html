@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        .container > div{
+            width: 70px;
+            height: 6px;
+            background-color: #454545;
+            margin: 12px 0;
+            transition: 0.4s;
+        }
+        
+        .change .bar2{
+            opacity: 0;
+        }
+        .change .bar1{
+            transform: rotate(-45deg) translate(-9px, 10px); 
+            background-color: chartreuse;
+        }
+        .change .bar3{
+            transform: rotate(45deg) translate(-18px, -8px);
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" onclick="changing(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <script>
+        function changing(x){
+            x.classList.toggle("change");
+        }
+    </script>
+</body>
+</html>

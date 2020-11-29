@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS psudo class selectors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+            color: #676767;
+            color: blueviolet;
+        }
+        ::selection{
+            font-size: 60px;
+            background-color: aqua;
+        }
+        input:checked{
+            height: 50px;
+            width: 50px;
+        }
+        input:disabled{
+            background: red;
+        }
+        input:enabled{
+            background: rgb(230, 236, 238);
+        }
+        p:empty {
+            width: 30px;
+            height: 50px;
+            background: green;
+        }
+        div:empty{
+            width: 100px;
+            height: 50px;
+            background: green;  
+        }
+        p:first-child {
+            color: blueviolet;
+        }
+        ul > :first-child {
+            background: yellow;
+        }
+        input[type=text]{
+            transition: all 3s;
+        }
+        input[type=text]:focus{
+            background: red;
+            width: 200px;
+            height: 50px;
+            
+
+        }
+        input:in-range {
+            border: 2px solid yellow;
+          }
+
+        input:invalid{
+            border: 4px solid red
+        }
+        .targeting div{
+            display: none;
+        }
+        .targeting div:target{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <h2>checked</h2>
+    <input type="radio" checked="checked" name="gender" value="male">
+    <input type="radio" name="gender" value="female">
+    <input type="checkbox" checked="checked" >
+    <input type="checkbox" value="maths" >
+    <h2>disabled</h2>
+    <input type="text" >
+    <input type="text" disabled="disabled">
+    <h2>empty</h2>
+    <p></p>
+    <p>hello</p>
+    <!--empty-->
+    <ul>
+        <li>sai</li>
+        <li>raje</li>
+        <li>saavi</li>
+    </ul>
+    <input type="number" min="5" max="10" value="7">
+
+    <input type="email" value="supportEmail">
+<br>
+    <div class="targeting">
+        <a href="#first">firstlink</a>
+        <a href="#second">second</a>
+        <a href="#three">three</a>
+        <div id="first">
+            <h1>FIRST</h1>
+        </div>
+        <div id="second">
+            <h1>SECOND</h1>
+        </div>
+        <div id="three">
+            <h1>THREE</h1>
+        </div>
+    </div>
+</body>
+</html>

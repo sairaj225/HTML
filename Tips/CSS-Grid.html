@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Grid</title>
+    <style>
+        .container{
+            width: fit-content;
+            height: 800px;
+            display: grid;
+            grid-template-columns: [first] 200px [first-end second] 200px  [third] 200px;
+            grid-template-rows: 40% auto 200px;
+            background: repeating-linear-gradient(
+                        45deg,
+                        red,
+                        rgb(63, 28, 219) 20%,
+                        rgb(223, 17, 52) 10%, 
+                        
+                        rgb(63, 28, 219) 20%);
+                        
+
+        }
+        .item{
+            background: linear-gradient(to right, rgb(243, 17, 187), lightblue);
+            padding: 25px 25px;
+            margin: 25px 25px;
+        }
+        .container2{
+            width: fit-content;
+            height: 800px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 40% auto 200px;
+            background: repeating-linear-gradient(
+                        45deg,
+                        rgb(0, 255, 55),
+                        rgb(63, 28, 219) 20%,
+                        rgb(17, 223, 62) 10%, 
+                        
+                        rgb(63, 28, 219) 20%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            HEADER
+        </div>
+        <div class="item">
+            ARTICLE
+        </div>
+        <div class="item">
+            ASIDE
+        </div>
+        <div class="item">
+            FOOTER
+        </div>
+        <div class="item">
+            HEADER
+        </div>
+        <div class="item">
+            ARTICLE
+        </div>
+        <div class="item">
+            ASIDE
+        </div>
+        <div class="item">
+            FOOTER
+        </div>
+        <div class="item">
+            FOOTER
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="item">
+            HEADER
+        </div>
+        <div class="item">
+            ARTICLE
+        </div>
+        <div class="item">
+            ASIDE
+        </div>
+        <div class="item">
+            FOOTER
+        </div>
+        <div class="item">
+            HEADER
+        </div>
+        <div class="item">
+            ARTICLE
+        </div>
+        <div class="item">
+            ASIDE
+        </div>
+        <div class="item">
+            FOOTER
+        </div>
+        <div class="item">
+            FOOTER
+        </div>
+    </div>
+</body>
+</html>

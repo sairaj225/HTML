@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Headers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .tablink {
+            background-color: #555;
+            color: #fff;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 16px 16px;
+            font-size: 17px;
+            width: 25%;
+        }
+        .tablink:hover {
+            background-color: #777;
+        }
+        .tabcontent {
+            color: #fff;
+            padding: 100px;
+            text-align: center;
+            display: none;
+        }
+        #London { background-color: red;}
+        #Paris { background-color: green;}
+        #Tokyo { background-color: blue;}
+        #Oslo { background-color: orange;}
+    </style>
+</head>
+<body>
+    <div id="London" class="tabcontent">
+        <h1>London</h1>
+        <p>London is the capital of Engl.</p>
+    </div>
+    <div id="Paris" class="tabcontent">
+        <h1>Paris</h1>
+        <p>Paris is the capital France.</p>
+    </div>
+    <div id="Tokyo" class="tabcontent">
+        <h1>Tokyo</h1>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+    <div id="Oslo" class="tabcontent">
+        <h1>Oslo</h1>
+        <p>Olso is the capital of Norway.</p>
+    </div>
+
+    <button id="default" class="tablink" onclick="openCity( 'London', this, 'red')">London</button>
+    <button class="tablink"  onclick="openCity( 'Paris', this, 'green')">Paris</button>
+    <button class="tablink" onclick="openCity( 'Tokyo', this, 'blue')">Tokyo</button>
+    <button class="tablink" onclick="openCity( 'Oslo', this, 'orange')">Oslo</button>
+
+    <script>
+        function openCity (  cityName, element, color ) {
+            // Hide all elements with class=tabcontent by default
+            var i, tabcontent, tablink;
+            tabcontent = document.getElementsByClassName( "tabcontent" );
+            for ( i = 0; i < tabcontent.length; i++ ) {
+                tabcontent[ i ].style.display = "none";
+            }
+
+            // Remove the background color of all tablinks/buttons
+            tablink = document.getElementsByClassName( "tablink" );
+            for ( i = 0; i < tablink.length; i++ ) {
+                tablink[ i ].style.backgroundColor = "";
+            }
+
+            // Show the specific tab content 
+            document.getElementById( cityName ).style.display = "block";
+
+            // Add the specific colour to button used to open the tab content
+            element.style.backgroundColor = color;
+        }
+
+        // Get the element with id=default and click on it
+        document.getElementById( "default" ).click();
+    </script>
+</body>
+</html>

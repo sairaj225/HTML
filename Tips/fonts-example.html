@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fonts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Open+Sans&family=Poppins:ital@1&family=Roboto&family=Roboto+Mono:ital@1&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --firasans: 'Fira Sans', sans-serif;
+            --robotoslab: 'Open Sans', sans-serif;
+            --robotomono: 'Poppins', sans-serif;
+            --poppins: 'Roboto', sans-serif;
+            --robot: 'Roboto Mono', monospace;
+            --opensans: 'Roboto Slab', serif;
+        }
+        h1{
+            font-size: 50px;
+        }
+        h2{
+            font-size: 40px;
+        }
+        h3{
+            font-size: 30px;
+        }
+        h4{
+            font-size: 20px;
+        }
+        h5{
+            font-size: 18px;
+        }
+        h6{
+            font-size: 15px;
+        }
+        .font1{
+            font-family: var(--firasans);
+            border: 10px solid blueviolet;
+        }
+        .font2{
+            font-family: var(--robotoslab);
+            border: 10px solid rgb(87, 12, 228);
+        }
+        .font3{
+            font-family: var(--robotomono);
+            border: 10px solid rgb(32, 231, 14);
+        }
+        .font4{
+            font-family: var(--poppins);
+            border: 10px solid rgb(209, 243, 15);
+        }
+        .font5{
+            font-family: var(--robot);
+            border: 10px solid rgb(134, 2, 123);
+        }
+        .font6{
+            font-family: var(--opensans);
+            border: 10px solid rgb(8, 172, 201);
+        }
+        
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(3,1fr);
+            grid-gap: 200px 200px;
+            padding: 200px 200px;
+        }
+        .common{
+            padding: 30px 30px;
+            border-radius: 10px;
+            color: #444;
+        }
+        .font-name{
+            display: flex;
+            flex-flow: row-reverse;
+        }
+        @media screen and (max-width: 500px){
+            .container{
+                color: #fff;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            body {
+              background-color: lightgreen;
+            }
+          }
+    </style>
+   
+      
+</head>
+<body>
+    <div class="container">
+        <div class="font1 common">
+            <div class="font-name"><h3>Fira Sans</h3></div>
+            <h1>ABCDEFGHIJKLMNOPQRSTUVWZYZ</h1>
+            <h1>abcdefghijklmnopqrstuvwxyz</h1>
+            <h2>abcdefghijklmnopqrstuvwxyz</h2>
+            <h3>abcdefghijklmnopqrstuvwxyz</h3>
+            <h4>abcdefghijklmnopqrstuvwxyz</h4>
+            <h5>abcdefghijklmnopqrstuvwxyz</h5>
+            <h6>abcdefghijklmnopqrstuvwxyz</h6>
+        </div>
+        <div class="font2 common">
+            <div class="font-name"><h3>Open Sans</h3></div>
+            <h1>ABCDEFGHIJKLMNOPQRSTUVWZYZ</h1>
+            <h1>abcdefghijklmnopqrstuvwxyz</h1>
+            <h2>abcdefghijklmnopqrstuvwxyz</h2>
+            <h3>abcdefghijklmnopqrstuvwxyz</h3>
+            <h4>abcdefghijklmnopqrstuvwxyz</h4>
+            <h5>abcdefghijklmnopqrstuvwxyz</h5>
+            <h6>abcdefghijklmnopqrstuvwxyz</h6>
+        </div>
+        <div class="font3 common">
+            <div class="font-name"><h3>Poppins</h3></div>
+            <h1>ABCDEFGHIJKLMNOPQRSTUVWZYZ</h1>
+            <h1>abcdefghijklmnopqrstuvwxyz</h1>
+            <h2>abcdefghijklmnopqrstuvwxyz</h2>
+            <h3>abcdefghijklmnopqrstuvwxyz</h3>
+            <h4>abcdefghijklmnopqrstuvwxyz</h4>
+            <h5>abcdefghijklmnopqrstuvwxyz</h5>
+            <h6>abcdefghijklmnopqrstuvwxyz</h6>
+        </div>
+        <div class="font4 common">
+            <div class="font-name"><h3>Roboto</h3></div>
+            <h1>ABCDEFGHIJKLMNOPQRSTUVWZYZ</h1>
+            <h1>abcdefghijklmnopqrstuvwxyz</h1>
+            <h2>abcdefghijklmnopqrstuvwxyz</h2>
+            <h3>abcdefghijklmnopqrstuvwxyz</h3>
+            <h4>abcdefghijklmnopqrstuvwxyz</h4>
+            <h5>abcdefghijklmnopqrstuvwxyz</h5>
+            <h6>abcdefghijklmnopqrstuvwxyz</h6>
+        </div>
+        <div class="font5 common">
+            <div class="font-name"><h3>Roboto Mono</h3></div>
+            <h1>ABCDEFGHIJKLMNOPQRSTUVWZYZ</h1>
+            <h1>abcdefghijklmnopqrstuvwxyz</h1>
+            <h2>abcdefghijklmnopqrstuvwxyz</h2>
+            <h3>abcdefghijklmnopqrstuvwxyz</h3>
+            <h4>abcdefghijklmnopqrstuvwxyz</h4>
+            <h5>abcdefghijklmnopqrstuvwxyz</h5>
+            <h6>abcdefghijklmnopqrstuvwxyz</h6>
+        </div>
+        <div class="font6 common">
+            <div class="font-name"><h3>Roboto Slab</h3></div>
+            <h1>ABCDEFGHIJKLMNOPQRSTUVWZYZ</h1>
+            <h1>abcdefghijklmnopqrstuvwxyz</h1>
+            <h2>abcdefghijklmnopqrstuvwxyz</h2>
+            <h3>abcdefghijklmnopqrstuvwxyz</h3>
+            <h4>abcdefghijklmnopqrstuvwxyz</h4>
+            <h5>abcdefghijklmnopqrstuvwxyz</h5>
+            <h6>abcdefghijklmnopqrstuvwxyz</h6>
+        </div>
+    </div>
+</body>
+</html>

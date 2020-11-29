@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Scroll</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        .outer-wrapper {
+            width: 100vh;
+            height: 100vw;
+            transform: rotate(-90deg) translateX(-100vh);
+            transform-origin: top left;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            position: absolute;
+        }
+        .outer-wrapper {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        .slide {
+            width: 100vw;
+            height: 100vh;
+        }
+        .one {
+            background-color: #a43cff;
+        }
+        .two {
+            background-color: #2cfaa8;
+        }
+        .three {
+            background-color: #116feb;
+        }
+        .four {
+            background-color: #f80053;
+        }
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            width: 400vw;
+            transform: rotate(90deg) translateY(-100vh);
+            transform-origin: top left;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer-wrapper">
+        <div class="wrapper">
+            <div class="slide one"></div>
+            <div class="slide two"></div>
+            <div class="slide three"></div>
+            <div class="slide four"></div>
+        </div>
+    </div>
+</body>
+</html>
