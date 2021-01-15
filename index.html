@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&family=Poppins&display=swap" rel="stylesheet">
+    <!--About-font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/fe55b981e5.js" crossorigin="anonymous"></script>
     <title>Sairaj</title>
     <style>
@@ -12,13 +15,17 @@
             margin: 0;
             padding: 0;
         }
+        body {
+            background-color: rgb(253, 249, 249);
+        }
+        /* Navigation bar */
         .nav-bar {
             position: absolute;
-            top: 10%;
-            right: 0;
-            transform: translate( -50%, -50% );
+            top: 5%;
+            right: 5%;
             display: flex;
             box-shadow: 5px 5px 20px #ccc;
+            z-index: 1;
         }
         .option {
             width: 80px;
@@ -36,45 +43,86 @@
             font-size: 1.2rem;
         }
         .option span {
-            margin: 0 5px;
+            margin: 0 3px;
             font-size: 0.9rem;
             font-family: 'Alata', sans-serif;
         }
         .option:hover {
             width: 130px;
         }
-        .header-content{
+        /* End-Navigation bar */
+        /* header */
+        header {
             display: grid;
             grid-template-columns: 50% 50%;
-            column-gap: 0;
-            z-index: -1;
+            width: 100vw;
+            height: 80vh;
         }
-        #img-section{
-            border: 150px solid #fff;
+        header #sai-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            flex-flow: column;
+            margin-top: 20vh;
         }
-        #img-section img{
-            border-radius: 5px;
-            height: 100%;
-            width: 100%;
-            object-fit: contain;
+        header #sai-img img{
+            height: 40%;
+            width: 30%;
+            border-radius: 10px;
+            animation: up-down 2s linear 1s infinite alternate;
+            box-shadow: 5px 5px 20px rgb(134, 133, 133);
+        }
+        header #sai-img #name {
+            margin-top: 20px;
+        }
+        header #sai-img p {
+            margin-top: 5px;
 
         }
-        #about-me{
-            border: 40px solid rgb(36, 224, 61);
-
+        @keyframes up-down {
+            0% {transform: translateY(0);}
+            100% {transform: translateY(-15px);}
         }
-        #my-name{
-            font-family: 'Cinzel Decorative', cursive;
-            font-size: 100px;
-            color: rgb(233, 41, 185);
-            padding: 10px;
+        header #about-me {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            flex-flow: column;
         }
-        #role, #current-work {
-            font-family: 'Poppins', sans-serif;            font-size: 100px;
-            color: rgb(25, 212, 88);
-            padding: 10px;
-            font-size: 40px;
+        header #about-me p {
+            box-shadow: 5px 5px 20px #ccc;
+            max-width: 300px;
+            height: max-content;
+            padding: 30px;
+            margin-top: 10vh;
+            border-radius: 20px;
+            font-family: 'Bodoni Moda', serif;
+            font-size: 24px;
+            color: rgb(48, 47, 47);
+            border: 2px solid green;
         }
+        header #about-me p::first-letter {
+            initial-letter: 2;
+            font-size: 42px;
+            color: green;
+          }
+        /* End-header */
+        @media screen and (max-width: 600px) {
+            
+            header {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto;
+            }
+            header #sai-img {
+                grid-area: 1;
+            }
+            header #about-me {
+                grid-area: 2;
+            }
+        } 
+       
     </style>
 </head>
 <body>
@@ -85,26 +133,27 @@
         </div>
         <div class="option">
             <i class="fa fa-user" aria-hidden="false"></i>
-            <span>Profile</span>
-        </div>
-        <div class="option">
-            <i class="fa fa-sliders" aria-hidden="false"></i>
-            <span>Setting</span>
-        </div>
-        <div class="option">
-            <i class="fa fa-exclamation-circle" aria-hidden="false"></i>
             <span>About</span>
         </div>
+        <div class="option">
+            <i class="fa fa-newspaper-o" aria-hidden="false"></i>
+            <span>Blog</span>
+        </div>
+        <div class="option">
+            <i class="fa fa-commenting-o" aria-hidden="false"></i>
+            <span>Contact</span>
+        </div>
     </div>
-    <div class="header-content">
+    <header>
         <div id="about-me">
-            <h1 id="my-name">Sai Raj</h1>
-            <p id="role">Full Stack Developer</p>
-            <p id="current-work">MCA Student at JNTUK</p>
+            <p>I'm a passionate web developer and python programmer. Currently doing my MCA at Jawaharlal Nehru Technologica University, Kakinada</p>
         </div>
-        <div id="img-section">
-            <img src="saipic.jpg"  width=100 height=100 alt="sairaj">
+        <div id="sai-img">
+            <img src="saipic.jpg" height="100" width="100" alt="sairaj">
+            <h1 id="name">Sairaj</h1>
+            <p>Full Stack Developer</p>
         </div>
-    </div>
+    </header>
+    
 </body>
 </html>
